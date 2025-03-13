@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz_style.css">
+    <title>Fortune Teller Mobile</title>
+</head>
+<body>
+    <div id="video-container" class="video-container">
+        <video id="intro-video" class="intro-video" autoplay>
+            <source src="media/Intro_Vid_V3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="quiz-container">
+        <img src="media/quiz_container_v2.png" alt="Quiz Container Background", class="quiz-image">
+        <div class="question"></div>
+        <div class="options"></div>
+        <div class="result" style="display: none;">Your Fortune: <span id="fortune"></span></div>
+        <button class="restart-btn" style="display: none;">Restart Quiz</button>
+    </div>
+    <script src="quiz_dynamicV2.js"></script>
+</html>

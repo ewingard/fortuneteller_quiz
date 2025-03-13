@@ -1,0 +1,153 @@
+body, html {
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body {
+            background-image: url('media/Starry_BG.svg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }   
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container { 
+            width: 80%;
+            height: 80%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            width: 50px;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: block;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .intro-video {
+            width: 100%; /* Make the video responsive */
+            height: 100%;
+            object-fit: fill;  /* Ensures the video scales while preserving aspect ratio */
+        }
+
+        .quiz-container {
+            position: relative;
+            background: #fff;
+            /* border-radius: 12px; */
+            /* border: 1px solid black; */
+            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            width: 100%;
+            max-width: 800px;
+            padding: 0px;
+            border-radius: 1.5vw;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .quiz-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .question, .options, .result, .restart-btn {
+            position: absolute;
+            padding: 20px;
+            color: black;
+            font-size: 16px;
+            overflow: hidden; /* NO OVERFLOW */ 
+            word-wrap: break-word;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+        }
+
+        .question {
+            top: 20%;
+        }
+        
+        .options {
+            top: 40%;
+        }
+
+        .result {  
+            top: 50%;
+        }
+
+        .restart-btn {
+            top: 70%;
+        }
+            
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .options, .restart-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 80%;
+            margin: 0 auto;
+        }        
+
+        .option {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #a3b3d8;
+            color: black;
+        }
+
+        .result {
+            font-size: 1.5em;
+            color: #172340;
+        }
+
+        .restart-btn:hover {
+            background-color: #a3b3d8;
+        }
