@@ -1,6 +1,7 @@
 const quizData = [
     {
-        question: "Go to the EEG Suite for 120 minutes", //Q1
+        quesNum: I,
+        question: "Go to the EEG Suite for 120 minutes",
         options: [
             "2 friends",
             "10 friends"
@@ -9,7 +10,8 @@ const quizData = [
         opt2: "LgGrp"
     },
     {
-        question: "Go to the Neuroscience conference with 3 friends", //Q2
+        quesNum: II,
+        question: "Go to the Neuroscience conference with 3 friends",
         options: [
             "30 minutes",
             "480 minutes"
@@ -18,7 +20,8 @@ const quizData = [
         opt2: "LgDur"
     },
     {
-        question: "Go to the poster session for 90 minutes", //Q3
+        quesNum: III, 
+        question: "Go to the poster session for 90 minutes",
         options: [
             "11 friends",
             "4 friends"
@@ -27,29 +30,35 @@ const quizData = [
         opt2: "SmGrp"
     },
     {
-        question: "Go to the B-RAD Lab with 12 friends", //Q4
+        quesNum: IV,
+        question: "Go to the B-RAD Lab with 12 friends",
         options: [
-            "",
-            ""
+            "540 minutes",
+            "10 minutes"
         ],
         opt1: "LgDur", // config 2
         opt2: "SmDur",
     },
     {
-        question: "", //Q5
-        options: ["",
-        ""],
+        quesNum: V,
+        question: "Go to Chicago for 4 days",
+        options: [
+            "4 friends",
+            "12 friends"],
         opt1: "SmGrp", //config 1
-        opt2: ""
+        opt2: "LgGrp"
     },
     {
-        question: "", //Q6
-        options: ["",
-        ""],
-        opt1: "Lg", // config 2
-        opt2: ""
+        quesNum: VI,
+        question: "Go to the - for - minutes", 
+        options: [
+            "11 friends",
+            "3 friends"],
+        opt1: "LgGrp", // config 2
+        opt2: "SmGrp"
     },
     {
+        quesNum: VII,
         question: "", //Q7
         options: ["",
         ""],
@@ -57,6 +66,7 @@ const quizData = [
         opt2: ""
     },
     {
+        quesNum: VIII,
         question: "", //Q8
         options: ["",
         ""],
