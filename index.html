@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,16 @@
     <title>Fortune Teller Mobile</title>
 </head>
 <body>
+
     <div id="video-container" class="video-container">
-        <video id="intro-video" class="intro-video" autoplay>
-            <source src="media/Intro_Vid_V3.mp4" type="video/mp4">
+        <video id="intro-video" class="intro-video" autoplay muted>
+            <source src="media/Blank_IntroVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="quiz-container">
-        <img src="media/quiz_container_v2.png" alt="Quiz Container Background", class="quiz-image">
+
+    <div class="quiz-container" style="display: none">
+        <img src="media/quiz_container_v3.png" alt="Quiz Container Background", class="quiz-image">
         <div class="question"></div>
         <div class="options"></div>
         <div class="result" style="display: none;">Your Fortune: <span id="fortune"></span></div>

@@ -1,6 +1,6 @@
 const quizData = [
     {
-        quesNum: I,
+        quesNum: "I",
         question: "Go to the EEG Suite for 120 minutes",
         options: [
             "2 friends",
@@ -10,8 +10,8 @@ const quizData = [
         opt2: "LgGrp"
     },
     {
-        quesNum: II,
-        question: "Go to the Neuroscience conference with 3 friends",
+        quesNum: "II",
+        question: "Go to the Neuroscience conference with 4 friends",
         options: [
             "30 minutes",
             "480 minutes"
@@ -20,7 +20,7 @@ const quizData = [
         opt2: "LgDur"
     },
     {
-        quesNum: III, 
+        quesNum: "III", 
         question: "Go to the poster session for 90 minutes",
         options: [
             "11 friends",
@@ -30,7 +30,7 @@ const quizData = [
         opt2: "SmGrp"
     },
     {
-        quesNum: IV,
+        quesNum: "IV",
         question: "Go to the B-RAD Lab with 12 friends",
         options: [
             "540 minutes",
@@ -40,17 +40,17 @@ const quizData = [
         opt2: "SmDur",
     },
     {
-        quesNum: V,
+        quesNum: "V",
         question: "Go to Chicago for 4 days",
         options: [
             "4 friends",
-            "12 friends"],
+            "20 friends"],
         opt1: "SmGrp", //config 1
         opt2: "LgGrp"
     },
     {
-        quesNum: VI,
-        question: "Go to the - for - minutes", 
+        quesNum: "VI",
+        question: "Go to Comic Sans for 60 minutes", 
         options: [
             "11 friends",
             "3 friends"],
@@ -58,20 +58,20 @@ const quizData = [
         opt2: "SmGrp"
     },
     {
-        quesNum: VII,
-        question: "", //Q7
-        options: ["",
-        ""],
-        opt1: "Lg", //config 2
-        opt2: ""
+        quesNum: "VII",
+        question: "Go to the Symposium for 75 minutes", //Q7
+        options: ["10 friends",
+        "2 friends"],
+        opt1: "LgGrp", //config 2
+        opt2: "SmGrp"
     },
     {
-        quesNum: VIII,
-        question: "", //Q8
-        options: ["",
-        ""],
-        opt1: "Sm", //config 1
-        opt2: ""
+        quesNum: "VIII",
+        question: "Go to the SANS Social with 1 friend", //Q8
+        options: ["360 minutes",
+        "30 minutes"],
+        opt1: "SmDur", //config 1
+        opt2: "LgDur"
     }
 ];
 
@@ -168,20 +168,27 @@ restartBtn.addEventListener("click", () => {
 
 loadQuestion();
 
-// Get references to the video and the quiz container
-const videoContainer = document.getElementById('video-container');
-const introVideo = document.getElementById('intro-video');
-const quizContainer = document.querySelector('.quiz-container');
-const overlay = document.getElementById('overlay');
+document.addEventListener('DOMContentLoaded', function () {
+    const introVideo = document.getElementById('intro-video');
+    const videoContainer = document.getElementById('video-container');
+    const quizContainer = document.querySelector('.quiz-container');
+    const overlay = document.getElementById('overlay'); // Just in case you're using this
 
-// Event listener for when the video ends
-introVideo.addEventListener('ended', function() {
-    // Hide the video container
-    videoContainer.style.display = 'none';
-    // Show the quiz container
-    quizContainer.style.display = 'block';
+    if (!introVideo) {
+        console.error("intro-video not found!");
+        return;
+    }
+
+    introVideo.addEventListener('ended', function () {
+        // Hide the video container
+        videoContainer.style.display = 'none';
+
+        // Show the quiz container
+        quizContainer.style.display = 'block';
+
+        // Optional: hide overlay if it exists
+        if (overlay) {
+            overlay.classList.add('hidden');
+        }
+    });
 });
-
-introVideo.onended = function() {
-    overlay.classList.add('hidden'); // Add the hidden class to hide the overlay
-};
