@@ -92,7 +92,7 @@ body, html {
             border-radius: 12px;
         }
 
-        .question, .options, .result, .restart-btn {
+        .question, .options, .result, .restart-btn, .learn-btn {
             position: absolute;
             padding: 20px;
             color: black;
@@ -104,28 +104,29 @@ body, html {
             bottom: 10%;
         }
 
-        .question {
-            top: 20%;
-        }
-        
         .options {
             top: 40%;
         }
 
-        .result {  
-            top: 50%;
+        .learn-btn {
+            top: 40%;
+            display: none;
+            max-height: 20%;
         }
 
         .restart-btn {
             top: 70%;
+            display: none;
+            max-height: 20%;
         }
             
         .question {
             font-size: 1.2em;
             margin-bottom: 20px;
+            top: 20%;
         }
 
-        .options, .restart-btn {
+        .options, .learn-btn, .restart-btn {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -149,8 +150,11 @@ body, html {
         .result {
             font-size: 1.5em;
             color: #172340;
+            display: none;
+            top: 20%;
         }
 
         .restart-btn:hover {
             background-color: #a3b3d8;
         }
+        

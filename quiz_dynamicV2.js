@@ -92,6 +92,7 @@ const optionsEl = document.querySelector(".options");
 const resultEl = document.querySelector(".result");
 const scoreEl = document.getElementById("fortune");
 const restartBtn = document.querySelector(".restart-btn");
+const learnBtn = document.querySelector(".learn-btn");
 
 function loadQuestion() {
     if (currentQuestion >= quizData.length) {
@@ -149,11 +150,29 @@ function calculateFortune() {
     return selectedFortune;
 }
 
+const fortuneLinks = {
+    Sloth: "https://www.b-radlab.com/sloth.html",
+    Butterfly: "https://www.b-radlab.com/butterfly.html",
+    Rabbit: "https://www.b-radlab.com/rabbit.html",
+    Swan: "https://www.b-radlab.com/swan.html",
+    Chameleon: "https://www.b-radlab.com/chameleon.html"
+};
+
+
 function endQuiz() {
     const fortune = calculateFortune();
+    questionEl.style.display = "none";
+    optionsEl.style.display = "none";
+
+    // Show result and restart button
     resultEl.style.display = "block";
-    scoreEl.textContent = fortune;
+    scoreEl.textContent = calculateFortune();
+    learnBtn.style.display = "block";
     restartBtn.style.display = "block";
+
+    learnBtn.onclick = () => {
+        window.open(fortuneLinks[fortune], "_blank");
+    };    
 }
 
 restartBtn.addEventListener("click", () => {
@@ -163,6 +182,7 @@ restartBtn.addEventListener("click", () => {
     optionsEl.style.display = "block";
     resultEl.style.display = "none";
     restartBtn.style.display = "none";
+    learnBtn.style.display = "none";
     loadQuestion();
 });
 
