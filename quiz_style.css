@@ -1,5 +1,7 @@
 body, html {
-            font-family: Arial, sans-serif;
+            font-family: Inter,sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
             color: black;
             margin: 0;
             padding: 0;
@@ -53,6 +55,39 @@ body, html {
             transform: translate(-50%, -50%);
             z-index: 2;
             display: block;
+        }
+
+        .option, .learn-btn {
+        align-items: center;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+        box-sizing: border-box;
+        color: #121212;
+        cursor: pointer;
+        display: inline-flex;
+        flex: 1 1 auto;
+        font-family: Inter,sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        justify-content: center;
+        line-height: 1;
+        margin: 0;
+        outline: none;
+        padding: 1rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .2s,-webkit-box-shadow .2s;
+        white-space: nowrap;
+        border: 0;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .option:hover, .learn-btn:hover {
+        box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+        background-color: #a3b3d8;
         }
 
         svg {
@@ -116,6 +151,7 @@ body, html {
             
         .question {
             font-size: 1.2em;
+            padding: 5vw;
             margin-bottom: 20px;
             top: 20%;
         }
@@ -126,17 +162,6 @@ body, html {
             gap: 20px;
             max-width: 80%;
             margin: 0 auto;
-        }        
-
-        .option {
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .option:hover, .learn-btn:hover {
-            background-color: #a3b3d8;
         }
 
         .result {
