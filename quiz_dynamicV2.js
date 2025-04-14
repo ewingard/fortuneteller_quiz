@@ -91,7 +91,6 @@ const questionEl = document.querySelector(".question");
 const optionsEl = document.querySelector(".options");
 const resultEl = document.querySelector(".result");
 const scoreEl = document.getElementById("fortune");
-const restartBtn = document.querySelector(".restart-btn");
 const learnBtn = document.querySelector(".learn-btn");
 
 function loadQuestion() {
@@ -164,27 +163,15 @@ function endQuiz() {
     questionEl.style.display = "none";
     optionsEl.style.display = "none";
 
-    // Show result and restart button
+    // Show result button
     resultEl.style.display = "block";
     scoreEl.textContent = calculateFortune();
     learnBtn.style.display = "block";
-    restartBtn.style.display = "block";
 
     learnBtn.onclick = () => {
         window.open(fortuneLinks[fortune], "_blank");
     };    
 }
-
-restartBtn.addEventListener("click", () => {
-    currentQuestion = 0;
-    score = { SmGrp: 0, LgGrp: 0, SmDur: 0, LgDur: 0 };
-    questionEl.style.display = "block";
-    optionsEl.style.display = "block";
-    resultEl.style.display = "none";
-    restartBtn.style.display = "none";
-    learnBtn.style.display = "none";
-    loadQuestion();
-});
 
 loadQuestion();
 

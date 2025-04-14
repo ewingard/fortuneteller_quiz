@@ -92,7 +92,7 @@ body, html {
             border-radius: 12px;
         }
 
-        .question, .options, .result, .restart-btn, .learn-btn {
+        .question, .options, .result, .learn-btn {
             position: absolute;
             padding: 20px;
             color: black;
@@ -109,13 +109,7 @@ body, html {
         }
 
         .learn-btn {
-            top: 40%;
-            display: none;
-            max-height: 20%;
-        }
-
-        .restart-btn {
-            top: 70%;
+            top: 50%;
             display: none;
             max-height: 20%;
         }
@@ -126,7 +120,7 @@ body, html {
             top: 20%;
         }
 
-        .options, .learn-btn, .restart-btn {
+        .options, .learn-btn {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -139,12 +133,10 @@ body, html {
             border: 2px solid #ccc;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        .option:hover {
+        .option:hover, .learn-btn:hover {
             background-color: #a3b3d8;
-            color: black;
         }
 
         .result {
@@ -153,8 +145,3 @@ body, html {
             display: none;
             top: 20%;
         }
-
-        .restart-btn:hover {
-            background-color: #a3b3d8;
-        }
-        
